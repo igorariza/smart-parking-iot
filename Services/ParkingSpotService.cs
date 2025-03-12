@@ -41,7 +41,7 @@ namespace SmartParkingLotManagement.Services
             var parkingSpots = await _parkingSpotRepository.GetAllAsync();
             return parkingSpots.Select(spot => new ParkingSpotDTO
             {
-                // Id = spot.Id.ToString(),
+                Id = spot.Id.ToString(),
                 IsOccupied = spot.IsOccupied,
                 DeviceId = spot.DeviceId
             });
@@ -51,11 +51,9 @@ namespace SmartParkingLotManagement.Services
         {
             var parkingSpot = new ParkingSpot
             {
-                // Id = Guid.Parse(parkingSpotDto.Id),
                 IsOccupied = parkingSpotDto.IsOccupied ?? false,
                 DeviceId = parkingSpotDto.DeviceId
             };
-
             await _parkingSpotRepository.AddAsync(parkingSpot);
             return true;
         }

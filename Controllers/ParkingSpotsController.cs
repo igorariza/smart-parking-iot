@@ -46,6 +46,7 @@ namespace SmartParkingLotManagement.Controllers
         [HttpPost]
         public async Task<IActionResult> AddParkingSpot([FromBody] ParkingSpotDTO parkingSpotDto)
         {
+            parkingSpotDto.Id = Guid.NewGuid().ToString();
             var result = await _parkingSpotService.AddParkingSpotAsync(parkingSpotDto);
             if (result)
                 return CreatedAtAction(nameof(GetAllParkingSpots), new { id = parkingSpotDto.Id }, parkingSpotDto);
