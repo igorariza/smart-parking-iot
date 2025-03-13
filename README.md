@@ -27,6 +27,7 @@ This project implements a Smart Parking Lot Management System that interacts wit
 - .NET 8
 - MongoDB for data storage
 - Dependency Injection for service management
+- Docker for containerization
 
 ## Setup Instructions
 
