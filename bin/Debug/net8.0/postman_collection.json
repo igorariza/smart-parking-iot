@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "6aa8bd75-e494-4af0-9db1-5836cb4708a5",
+		"name": "Smart Parking Lot Management",
+		"description": "Colección para probar los endpoints de Smart Parking Lot Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2700935"
+	},
+	"item": [
+		{
+			"name": "Occupy Parking Spot",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"deviceId\": \"1234567\"\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/parkingspots/01df7af6-55dc-49c4-906a-7f3248d5c6ad/occupy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"parkingspots",
+						"01df7af6-55dc-49c4-906a-7f3248d5c6ad",
+						"occupy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Free Parking Spot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/parkingspots/89618b65-609c-4d05-a131-40129a25154e/free",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"parkingspots",
+						"89618b65-609c-4d05-a131-40129a25154e",
+						"free"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Parking Spots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/parkingspots",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"parkingspots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Parking Spot",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"isOccupied\": true,\n  \"deviceId\": \"12345679\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/parkingspots",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"parkingspots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Parking Spot",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/parkingspots/01df7af6-55dc-49c4-906a-7f3248d5c6ad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"parkingspots",
+						"01df7af6-55dc-49c4-906a-7f3248d5c6ad"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

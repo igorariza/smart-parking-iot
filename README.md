@@ -11,11 +11,11 @@ This project implements a Smart Parking Lot Management System that interacts wit
 
 ## API Endpoints
 
-- **POST** `/api/parking-spots/{id}/occupy`: Mark a parking spot as occupied.
-- **POST** `/api/parking-spots/{id}/free`: Mark a parking spot as free.
-- **GET** `/api/parking-spots`: Return the status of all parking spots.
-- **POST** `/api/parking-spots`: Add a new parking spot.
-- **DELETE** `/api/parking-spots/{id}`: Remove a parking spot.
+- **POST** `/api/v1/parking-spots/{id}/occupy`: Mark a parking spot as occupied.
+- **POST** `/api/v1/parking-spots/{id}/free`: Mark a parking spot as free.
+- **GET** `/api/v1/parking-spots`: Return the status of all parking spots.
+- **POST** `/api/v1/parking-spots`: Add a new parking spot.
+- **DELETE** `/api/v1/parking-spots/{id}`: Remove a parking spot.
 
 ## Requirements
 
@@ -32,8 +32,8 @@ This project implements a Smart Parking Lot Management System that interacts wit
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
-   cd SmartParkingLotManagement
+   git clone https://github.com/igorariza/smart-parking-iot.git
+   cd smart-parking-iot
    ```
 
 2. Install the required dependencies:

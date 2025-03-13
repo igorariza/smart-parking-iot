@@ -48,3 +48,4 @@
 /Users/igor/Documents/github.com/smart-parking-iot/obj/Debug/net8.0/SmartParkingLotManagement.pdb
 /Users/igor/Documents/github.com/smart-parking-iot/obj/Debug/net8.0/SmartParkingLotManagement.genruntimeconfig.cache
 /Users/igor/Documents/github.com/smart-parking-iot/obj/Debug/net8.0/ref/SmartParkingLotManagement.dll
+/Users/igor/Documents/github.com/smart-parking-iot/bin/Debug/net8.0/postman_collection.json
