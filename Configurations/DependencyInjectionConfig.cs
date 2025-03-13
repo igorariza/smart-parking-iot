@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
 using SmartParkingLotManagement.Repositories;
 using SmartParkingLotManagement.Services;
+using Microsoft.Extensions.Configuration;
 
 namespace SmartParkingLotManagement.Configurations
 {

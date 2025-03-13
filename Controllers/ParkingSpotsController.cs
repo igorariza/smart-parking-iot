@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace SmartParkingLotManagement.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class ParkingSpotsController : ControllerBase
     {
         private readonly ParkingSpotService _parkingSpotService;
@@ -21,6 +21,13 @@ namespace SmartParkingLotManagement.Controllers
         [HttpPost("{id}/occupy")]
         public async Task<IActionResult> OccupySpot(string id, [FromBody] string deviceId)
         {
+            if (string.IsNullOrEmpty(deviceId))
+            {
+                return BadRequest("Device ID is required.....");
+            }
+
+            Console.WriteLine("Device id: " + deviceId);
+            Console.WriteLine("Spot id: " + id);
             var result = await _parkingSpotService.OccupySpotAsync(id, deviceId);
             if (result)
                 return Ok();
@@ -30,6 +37,10 @@ namespace SmartParkingLotManagement.Controllers
         [HttpPost("{id}/free")]
         public async Task<IActionResult> FreeSpot(string id)
         {
+            if (!Guid.TryParse(id, out var parkingSpotId))
+            {
+                return BadRequest("Invalid parking spot ID format.");
+            }
             var result = await _parkingSpotService.FreeSpotAsync(id);
             if (result)
                 return Ok();

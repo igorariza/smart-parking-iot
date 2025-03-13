@@ -25,6 +25,10 @@ namespace SmartParkingLotManagement.Controllers
             {
                 return BadRequest("Device data is required.");
             }
+            if (string.IsNullOrEmpty(deviceDto.Id))
+            {
+                return BadRequest("Device ID is required.");
+            }
 
             var device = new Device
             {

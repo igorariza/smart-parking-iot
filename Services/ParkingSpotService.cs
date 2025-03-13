@@ -29,9 +29,11 @@ namespace SmartParkingLotManagement.Services
         public async Task<bool> FreeSpotAsync(string id)
         {
             var parkingSpot = await _parkingSpotRepository.GetByIdAsync(id);
-
-            parkingSpot.IsOccupied = false;
-            parkingSpot.DeviceId = null;
+            if (parkingSpot == null)
+            {
+                return false;
+            }
+            
             await _parkingSpotRepository.UpdateAsync(parkingSpot);
             return true;
         }

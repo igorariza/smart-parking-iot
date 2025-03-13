@@ -47,6 +47,9 @@ This project implements a Smart Parking Lot Management System that interacts wit
    ```
    dotnet run
    ```
+5. The application will be available at `http://localhost:5000`.
+   postman colection:
+   [postman_collection.json](postman_collection.json)
 
 ## Testing
 
@@ -55,10 +58,3 @@ Unit tests are included to validate core business logic. You can run the tests u
 dotnet test
 ```
 
-## Contributing
-
-Feel free to submit issues or pull requests for improvements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License.

@@ -26,7 +26,7 @@ namespace SmartParkingLotManagement.Repositories
         }
 
         public async Task<ParkingSpot> GetByIdAsync(string id)
-        {
+        {   
             return await _parkingSpots.Find(spot => spot.Id == Guid.Parse(id)).FirstOrDefaultAsync();
         }
 
